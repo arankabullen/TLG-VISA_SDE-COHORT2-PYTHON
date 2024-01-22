@@ -1,50 +1,46 @@
-# !usr/bin/env python3
-import os
-import random
-
-import youtube_dl
-import pygame
-import spotipy
-
-from spotipy.oauth2 import SpotifyClientCredentials
 
 
+def get_input(prompt, options):
+    while True:
+        user_input = input(prompt).lower()
+        if user_input in options:
+            return user_input
+        else:
+            print("Invalid input. Please try again.")
 
+def find_pet(size, energy, fur_preference):
+    if size == "small" and energy == "low" and fur_preference == "fur":
+        return "You should get a cat!"
+    elif size == "medium" and energy == "moderate" and fur_preference == "fur":
+        return "A dog might be the perfect companion for you!"
+    elif size == "large" and energy == "high" and fur_preference == "fur":
+        return "Consider getting a husky for an active lifestyle!"
+    elif size == "small" and energy == "low" and fur_preference == "scales":
+        return "A small reptile like a gecko could be a great fit!"
+    elif size == "medium" and energy == "moderate" and fur_preference == "scales":
+        think = "How about a bearded dragon?"
+    elif size == "large" and energy == "high" and fur_preference == "scales":
+        return "Consider a large snake or iguana!"
+    else:
+        return "It's challenging to find a pet that matches all your preferences, but consider exploring local shelters!"
 
-#global variables
-song_name = " "
+def main():
+    print("Welcome to the Pet Finder!")
+    print("Answer the following questions to find your ideal pet.")
 
-artist = " "
-guess_count = 0
+    sizes = ["small", "medium", "large"]
+    energies = ["low", "moderate", "high"]
+    fur_preferences = ["fur", "scales"]
 
+    size = get_input("What size of pet are you looking for? (small, medium, large) ", sizes)
+    energy = get_input("How much energy do you want your pet to have? (low, moderate, high) ", energies)
+    fur_preference = get_input("Do you prefer a pet with fur or scales? (fur, scales) ", fur_preferences)
 
-# Create a list of popular songs
-song_list = []
+    result = find_pet(size, energy, fur_preference)
 
+    print("\nBased on your preferences:")
+    print(result)
 
-# Import songs from a music database into empty song_list
-
-
-# randomly shuffle songs and play a 5 second audio clip
-
-
-# User has 2 chances to enter the correct song name
-
-guess = input("Name this song")
-
-answer = song_name
-
-if guess == answer:
-    print("Yes, you are listening to:", song_name, "written by:", artist)
-
-elif guess != answer and guess_count == 1:
-    print("Sorry", guess.upper(), "is not correct. Please try again!\n Attempt Remaining: 1")
-    guess_count += 1
-
-else guess != answer and guess_count == 2:
-    print("OoooF, you almost had it! The song you are looking for is:", song_name, "by", artist)
-
-
-#method to play an audio file in python
-
+if __name__ == "__main__":
+    main()
 
