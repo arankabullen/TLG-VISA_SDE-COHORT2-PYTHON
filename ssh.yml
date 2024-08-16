@@ -1,0 +1,7 @@
+---
+- ip: 10.10.2.3
+  un: bender
+  passw: alta3
+- ip: 10.10.2.4
+  un: fry
+  passw: alta3
