@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Song Guessing Game!</h1>
+        <form action="{{ url_for('game_routes.start_game') }}" method="post">
+            <label for="playlist_id">Enter YouTube Playlist ID:</label>
+            <input type="text" id="playlist_id" name="playlist_id" required>
+            <button type="submit">Start Game</button>
+        </form>
+    </div>
+</body>
+</html>

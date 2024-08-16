@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Over</title>
+</head>
+<body>
+    <h1>Game Over</h1>
+
+    <!-- Display the player's final score -->
+    <p>Your final score is: {{ score }}</p>
+
+    <!-- Provide an option to play again -->
+    <a href="{{ url_for('game_routes.start_screen') }}">Play Again</a>
+</body>
+</html>
