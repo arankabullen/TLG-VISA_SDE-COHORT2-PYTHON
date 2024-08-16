@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for, session
 from flask_app.gameService import GameService  # Import the GameService
 import random
-from song import Song
+from FINAL_PROJECT.song import Song
 
 # Create a Flask blueprint for the game routes
 game_routes = Blueprint('game_routes', __name__)

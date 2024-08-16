@@ -3,8 +3,8 @@ import random
 from googleapiclient.discovery import build  # Import Google API client for YouTube
 from spotipy.oauth2 import SpotifyClientCredentials  # Import Spotify credentials manager
 import spotipy  # Import Spotify API library
-from song import Song  # Import the Song model
-from state import state  # Import the GameState model
+from FINAL_PROJECT.song import Song  # Import the Song model
+from FINAL_PROJECT.state import state  # Import the GameState model
 import yt_dlp as youtube_dl
 
 import re
